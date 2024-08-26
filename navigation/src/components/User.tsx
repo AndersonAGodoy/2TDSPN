@@ -3,15 +3,17 @@ import { Image, StyleSheet, Text, View } from "react-native";
 interface UserProps {
   source: string,
   username: string,
-  userSlug: string
+  userSlug: string,
+  userId: string
 }
 
-export default function User({ source, userSlug, username }: UserProps) {
+export default function User({ source, userSlug, username, userId }: UserProps) {
   return (
     <View style={styles.userContainer}>
       <Image source={{ uri: source }} style={styles.userImage} />
       <Text style={styles.username}>{username}</Text>
       <Text style={styles.userSlug}>{userSlug}</Text>
+      <Text>Id: {JSON.stringify(userId)}</Text>
     </View>
   )
 }
