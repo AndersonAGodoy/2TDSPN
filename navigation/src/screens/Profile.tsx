@@ -11,8 +11,8 @@ import { RootStackParamsList } from '../types/navigation';
 import { RouteProp } from '@react-navigation/native'
 
 
-type ProfileScreenNavigationProp = StackNavigationProp<RootStackParamsList>
-type ProfileScreenRouteProp = RouteProp<RootStackParamsList>
+type ProfileScreenNavigationProp = StackNavigationProp<RootStackParamsList, 'Profile'>
+type ProfileScreenRouteProp = RouteProp<RootStackParamsList, 'Profile'>
 
 type Props = {
   navigation: ProfileScreenNavigationProp,
